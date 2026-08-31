@@ -1,0 +1,29 @@
+{
+    "name": "wiredspast/habbo-api-wrapper-php",
+    "description": "An API wrapper for Habbo",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Wiredspast\\HabboApiWrapperPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WiredSpast",
+            "email": "wiredspast@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "php-http/discovery": "^1.20",
+        "ext-xml": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
