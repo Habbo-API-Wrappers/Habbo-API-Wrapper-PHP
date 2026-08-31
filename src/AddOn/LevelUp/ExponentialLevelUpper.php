@@ -2,7 +2,7 @@
 
 namespace Wiredspast\HabboApiWrapperPhp\AddOn\LevelUp;
 
-class ExponentialAbstractLevelUpper extends AbstractLevelUpper
+class ExponentialLevelUpper extends AbstractLevelUpper
 {
     private readonly float $strengthAsDecimal;
     private readonly int $maxXpValue;

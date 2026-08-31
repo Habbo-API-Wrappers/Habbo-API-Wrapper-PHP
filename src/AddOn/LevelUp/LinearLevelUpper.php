@@ -2,7 +2,7 @@
 
 namespace Wiredspast\HabboApiWrapperPhp\AddOn\LevelUp;
 
-class LinearAbstractLevelUpper extends AbstractLevelUpper
+class LinearLevelUpper extends AbstractLevelUpper
 {
     public function __construct(
         private readonly int $stepSize,

@@ -2,7 +2,7 @@
 
 namespace Wiredspast\HabboApiWrapperPhp\AddOn\LevelUp;
 
-class InterpolateAbstractLevelUpper extends AbstractLevelUpper
+class InterpolateLevelUpper extends AbstractLevelUpper
 {
     private array $xpToLevel;
 

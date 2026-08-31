@@ -10,11 +10,11 @@ class LevelUpper
      * @param int $stepSize The amount of XP required for each level
      * @param int $maxLevel The maximum level
      *
-     * @return self A linear level upper
+     * @return AbstractLevelUpper A linear level upper
      */
-    public static function linear(int $stepSize, int $maxLevel): self
+    public static function linear(int $stepSize, int $maxLevel): AbstractLevelUpper
     {
-        return new LinearAbstractLevelUpper($stepSize, $maxLevel);
+        return new LinearLevelUpper($stepSize, $maxLevel);
     }
 
     /**
@@ -22,11 +22,11 @@ class LevelUpper
      *
      * @param array<int, int> $levelToXpMap The configuration of the add-on
      *
-     * @return self An interpolating level upper
+     * @return AbstractLevelUpper An interpolating level upper
      */
-    public static function interpolate(array $levelToXpMap): self
+    public static function interpolate(array $levelToXpMap): AbstractLevelUpper
     {
-        return new InterpolateAbstractLevelUpper($levelToXpMap);
+        return new InterpolateLevelUpper($levelToXpMap);
     }
 
     /**
@@ -36,10 +36,10 @@ class LevelUpper
      * @param int $strength The exponential increase factor (%)
      * @param int $maxLevel The maximum level
      *
-     * @return self An exponential level upper
+     * @return AbstractLevelUpper An exponential level upper
      */
-    public static function exponential(int $initialXp, int $strength, int $maxLevel): self
+    public static function exponential(int $initialXp, int $strength, int $maxLevel): AbstractLevelUpper
     {
-        return new ExponentialAbstractLevelUpper($initialXp, $strength, $maxLevel);
+        return new ExponentialLevelUpper($initialXp, $strength, $maxLevel);
     }
 }
