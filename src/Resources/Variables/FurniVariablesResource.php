@@ -86,7 +86,7 @@ class FurniVariablesResource extends AbstractVariablesResource
     public function changeVariable(string $variableName, FurniTargetKind $targetKind, int $furniId, int $value): VariableResult
     {
         $furniId = FurniIdSanitiser::sanitiseFurniId($furniId);
-        $data = $this->transporter->put(
+        $data = $this->transporter->patch(
             "/api/public/rooms/$this->roomId/variables/furni/$variableName/{$targetKind->key()}/$furniId",
             [
                 'value' => $value

@@ -82,7 +82,7 @@ class UserVariablesResource extends AbstractVariablesResource
      */
     public function changeVariable(string $variableName, UserTargetKind $targetKind, int $entityId, int $value): VariableResult
     {
-        $data = $this->transporter->put(
+        $data = $this->transporter->patch(
             "/api/public/rooms/$this->roomId/variables/user/$variableName/{$targetKind->key()}/$entityId",
             [
                 'value' => $value
